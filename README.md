@@ -8,8 +8,9 @@ Selamat datang di **Buku Tamu Digital**, sebuah aplikasi web yang dirancang untu
 
 
 # 📚eHadir – Dashboard Admin
+<img width="1432" alt="Screenshot 2025-06-21 at 21 55 17" src="https://github.com/user-attachments/assets/88b10605-9dfc-4123-9ce5-be2fb08a8dd9" />
 
-## ✨ Deskripsi Singkat
+## ✨ Penjelasan
 Halaman ini merupakan pusat kendali (admin panel) dari sistem **Buku Tamu Digital**. Admin dapat memantau statistik kunjungan, mengelola data pengguna, serta melakukan konfigurasi data pendukung seperti departemen, jabatan, dan jenis keperluan.
 
 ---
