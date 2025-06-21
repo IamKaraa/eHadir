@@ -22,7 +22,7 @@
 <section id="home" class="relative">
   <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" alt="Building" class="w-full h-[600px] object-cover" />
   <div class="absolute top-32 left-8 text-white max-w-md" data-aos="fade-right">
-    <h1 class="text-4xl font-extrabold">WELCOME In our<br />company</h1>
+    <h1 class="text-4xl font-extrabold">Welcome To our<br />Company</h1>
     <p class="mt-4 text-lg font-semibold">We are a professional team to manage your business.</p>
     <a href="tamu/form_input.php" class="inline-block mt-6 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-bold rounded-full transition">Get Started</a>
   </div>
