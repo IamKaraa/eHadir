@@ -4,6 +4,10 @@
 
 Selamat datang di **Buku Tamu Digital**, sebuah aplikasi web yang dirancang untuk mencatat data tamu yang berkunjung ke sebuah institusi. Sistem ini dilengkapi dengan fitur CRUD lengkap, login admin, pencarian, dan desain modern menggunakan Tailwind CSS.
 ---
+# landing page
+<img width="1437" alt="image" src="https://github.com/user-attachments/assets/25eff9d6-e8da-422b-bcf1-d2b0d47c9917" />
+
+<img width="1439" alt="image" src="https://github.com/user-attachments/assets/d4278f6d-066e-4d03-8271-569dce71f58d" />
 
 # login 
 ada dua role login yaitu admin dan resepsionis
