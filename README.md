@@ -32,6 +32,27 @@ Di bagian utama dashboard, admin dapat melihat **statistik real-time**:
 
 ---
 
+## 📂 Navigasi Sidebar – Fungsi Menu
+
+| Menu Sidebar            | Ikon     | Fungsi                                                                 |
+|-------------------------|----------|------------------------------------------------------------------------|
+| **HOME**                | 🏠       | Akses ke halaman dashboard utama.                                     |
+| └── *Dashboard*         |          | Tampilan statistik dan visualisasi kunjungan.                         |
+| **TOOLS & KOMPONEN**    | 🧰       | Modul pengelolaan data referensi yang mendukung sistem buku tamu.     |
+| └── *Tamu*              | 👤       | Lihat data tamu secara keseluruhan.                                   |
+| └── *Kelola Tamu*       | 🛠️       | CRUD (Create, Read, Update, Delete) data tamu.                        |
+| └── *Jenis Keperluan*   | 📌       | CRUD (Create, Read, Update, Delete) jenis keperluan kunjungan.        |
+| └── *Data Petugas*      | 👮       | CRUD (Create, Read, Update, Delete) pegawai yang dituju tamu.         |
+| └── *Departemen*        | 🏢       |CRUD (Create, Read, Update, Delete) daftar departemen tujuan tamu.     |
+| └── *Jabatan*           | 💼       | CRUD Data jabatan yang relevan untuk petugas maupun tamu.             |
+| **Logout**              | 🔒       | Keluar dari sesi admin saat ini.                                      |
+
+---
+
+## ✅ Fitur Tambahan:
+- **Sidebar Toggle**: Sidebar bisa dibuka/tutup lewat tombol hamburger.
+- **Auto-Close Sidebar**: Sidebar otomatis tertutup jika pointer keluar dari area.
+- **Tampilan Responsif**: Desain cocok untuk layar desktop dan mobile.
 
     
 ### 👤 TAMU (Frontend)
