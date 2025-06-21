@@ -1,58 +1,94 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
 session_start();
 include 'config/koneksi.php';
 
-if (isset($_POST['login'])) {
-  $username = mysqli_real_escape_string($conn, $_POST['username']);
-  $password = $_POST['password']; // plain password dari input form
+if (isset($_SESSION['admin'])) {
+    // Kalau udah login, langsung diarahkan ke dashboard
+    header('Location: dashboard.php');
+    exit;
+}
 
-  $query = mysqli_query($conn, "SELECT * FROM users WHERE username='$username'");
-  $user  = mysqli_fetch_assoc($query);
+$error = '';
 
-  if ($user && password_verify($password, $user['password'])) {
-    // Simpan session
-    $_SESSION['username'] = $user['username'];
-    $_SESSION['role']     = $user['role'];
-    $_SESSION['success']  = 'Berhasil login';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'] ?? '';
+    $password = $_POST['password'] ?? '';
 
-    // Redirect sesuai role
-    if ($user['role'] === 'admin') {
-      header("Location: admin/dashboard.php");
-    } elseif ($user['role'] === 'resepsionis') {
-      header("Location: resepsionis/dashboard.php");
+    // Cari user di database
+    $query = "SELECT * FROM admin WHERE username = ?";
+    $stmt = mysqli_prepare($conn, $query);
+    mysqli_stmt_bind_param($stmt, 's', $username);
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+    $user = mysqli_fetch_assoc($result);
+
+    if ($user && password_verify($password, $user['password'])) {
+        // Login sukses, buat session
+        $_SESSION['admin'] = $user['username'];
+        header('Location: dashboard.php');
+        exit;
     } else {
-      $error = "Role tidak dikenali.";
+        $error = "Username atau password salah!";
     }
-    exit();
-  } else {
-    $error = "Username atau password salah!";
-  }
 }
 ?>
 
-<!-- HTML Login Form -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Login</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8" />
+    <title>Login Admin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-custom-blue {
+            background-color: #2563eb; 
+        }
+        .logo {
+            width: 100px;
+            height: auto;
+        }
+        .rounded-input {
+            border-radius: 15px; /* Radius lebih besar seperti gambar */
+        }
+        .input-border-gray {
+            border: 1px solid #D3D3D3; /* Hanya stroke line abu-abu terang */
+        }
+        .half-screen {
+            width: 50%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center h-screen">
-  <form method="POST" class="bg-white p-8 rounded shadow-md w-96">
-    <h2 class="text-2xl font-bold text-center mb-6">Login Sistem</h2>
-
-    <?php if (isset($error)): ?>
-      <div class="bg-red-100 text-red-700 p-2 rounded mb-4"><?= $error ?></div>
-    <?php endif; ?>
-
-    <input type="text" name="username" placeholder="Username" required class="w-full mb-3 p-2 border rounded" />
-    <input type="password" name="password" placeholder="Password" required class="w-full mb-4 p-2 border rounded" />
-    
-    <button type="submit" name="login" class="w-full bg-orange-400 text-white py-2 rounded hover:bg-orange-500">Login</button>
-  </form>
+<body class="flex h-screen">
+    <div class="half-screen bg-custom-blue flex items-center justify-center">
+        <div class="text-white text-center">
+            <img src="https://upload.wikimedia.org/wikipedia/id/thumb/f/ff/Logo_UnivLampung.png/960px-Logo_UnivLampung.png" alt="Logo" class="logo mx-auto mb-4">
+            <h2 class="text-xl font-bold">eHadir</h2>
+            <h3 class="text-lg">Sistem Informasi Buku Tamu Digital</h3>
+            <p class="text-sm">Ilmu Komputer, Universitas Lampung</p>
+        </div>
+    </div>
+    <div class="half-screen flex items-center justify-center bg-white">
+        <div class="p-8 w-full max-w-md text-center">
+            <h1 class="text-2xl font-bold mb-6">Welcome Back!</h1>
+            <?php if ($error): ?>
+                <p class="mb-4 text-red-600 font-semibold"><?= htmlspecialchars($error) ?></p>
+            <?php endif; ?>
+            <form method="POST" action="" class="space-y-4">
+                <div>
+                    <input type="text" name="username" required class="w-full px-3 py-2 rounded-input input-border-gray" placeholder="Enter Username..." />
+                </div>
+                
+                <div>
+                    <input type="password" name="password" required class="w-full px-3 py-2 rounded-input input-border-gray" placeholder="Password" />
+                </div>
+                
+                <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-input hover:bg-blue-700 transition">Login</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
