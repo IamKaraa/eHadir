@@ -124,64 +124,8 @@ Role ini dirancang khusus untuk staf resepsionis yang bertugas mencatat kedatang
 
 ## 📁 Struktur Folder
 
-├── admin/
-│ ├── dashboard.php # Dashboard utama untuk admin
-│ └── data-tamu.php # Lihat seluruh data tamu
+<img width="947" alt="image" src="https://github.com/user-attachments/assets/313e771e-2740-46b4-b4a7-214555872f86" />
 
-├── config/
-│ ├── auth.php # Autentikasi umum
-│ ├── auth_resepsionis.php # Autentikasi khusus resepsionis
-│ ├── create_admin.php # Buat akun admin baru
-│ └── koneksi.php # Koneksi ke database
-
-├── departemen/
-│ ├── index.php # Tampilan crud List departemen
-│ ├── tambah.php # Tambah departemen
-│ ├── edit.php # Edit departemen
-│ └── hapus.php # Hapus departemen
-
-├── jabatan/
-│ ├── index.php # Tampilan crud List jabatan
-│ ├── tambah.php # Tambah jabatan
-│ ├── edit.php # Edit jabatan
-│ └── hapus.php # Hapus jabatan
-
-├── keperluan/
-│ ├── index.php # Tampilan crud jenis keperluan
-│ ├── tambah.php # Tambah jenis keperluan
-│ ├── edit.php # Edit jenis keperluan
-│ └── hapus.php # Hapus jenis keperluan
-
-├── layouts/
-│ ├── header.php # Header umum
-│ ├── headeradmin.php # Header khusus admin
-│ ├── sidebar-admin.php # Sidebar admin
-│ ├── sidebar-resepsionis.php # Sidebar resepsionis
-│ └── footer.php # Footer layout
-
-├── petugas/
-│ ├── index.php # Tampilan crud List data pegawai yang dituju client
-│ ├── tambah.php # Tambah data pegawai yang dituju client
-│ ├── edit.php # Edit data pegawai yang dituju client
-│ └── hapus.php # Hapus data pegawai yang dituju client
-
-├── resepsionis/
-│ ├── dashboard.php # Dashboard untuk resepsionis
-│ ├── daftar_tamu.php # Lihat daftar tamu
-│ └── input-tamu.php # Input tamu baru
-
-├── tamu/
-│ ├── form_input.php # Form input tamu
-│ ├── list_tamu.php # daftar  data tamu
-│ ├── tambah.php # Tambah tamu
-│ ├── edit.php # Edit data tamu
-│ ├── update.php # Update tamu
-│ ├── hapus.php # Hapus tamu
-
-│ ├── index.php # Landing page 
-│ ├── hash.php # Utility hashing password
-│ ├── login.php # Login user
-│ └── logout.php # Logout user
 
 ## 🛠️ Teknologi yang Digunakan
 
