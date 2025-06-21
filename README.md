@@ -5,6 +5,10 @@
 Selamat datang di **Buku Tamu Digital**, sebuah aplikasi web yang dirancang untuk mencatat data tamu yang berkunjung ke sebuah institusi. Sistem ini dilengkapi dengan fitur CRUD lengkap, login admin, pencarian, dan desain modern menggunakan Tailwind CSS.
 ---
 
+# login 
+ada dua role login yaitu admin dan resepsionis
+
+<img width="1008" alt="image" src="https://github.com/user-attachments/assets/345a8ac1-697f-4f96-b7fb-4738e2a82a38" />
 
 
 # 📚eHadir – Dashboard Admin
@@ -73,18 +77,25 @@ Di bagian utama dashboard, admin dapat melihat **statistik real-time**:
 # Jabatan
 <img width="1428" alt="image" src="https://github.com/user-attachments/assets/574bb673-a6f4-4cdb-8892-481cf3c287d9" />
 
-# Login
+# Logout
 <img width="1440" alt="image" src="https://github.com/user-attachments/assets/0c2aad47-8920-40d6-ba1d-5403feef4def" />
 
 
     
-### 👤 TAMU (Frontend)
+### 👤 TAMU
 Tamu dapat melakukan input ke sistem tanpa login:
 - Mengisi form buku tamu
 - Memilih jenis keperluan & tujuan
 - Mencantumkan identitas & instansi
 - Mendapat notifikasi bahwa data berhasil disimpan
 - Melihat data yang sudah di inputkan
+
+# form input tamu
+<img width="1435" alt="image" src="https://github.com/user-attachments/assets/a2772567-7c40-41db-81fd-44b012fd698a" />
+
+# daftar tamu 
+<img width="1435" alt="image" src="https://github.com/user-attachments/assets/88f6618c-4393-4cb5-bb83-2d081e3a9b4a" />
+
 
 ### 🧑‍💼 Role Resepsionis
 Role ini dirancang khusus untuk staf resepsionis yang bertugas mencatat kedatangan tamu tanpa akses ke data lainnya. Fiturnya meliputi:
