@@ -6,18 +6,33 @@ Selamat datang di **Buku Tamu Digital**, sebuah aplikasi web yang dirancang untu
 ---
 
 
-## 🚀 Fitur
 
-- **Dashboard Admin**
-  - Ringkasan data tamu dan aktivitas
+# 📚eHadir – Dashboard Admin
 
-- **Tools & Komponen (CRUD)**
-  - Kelola Tamu
-  - Data Tamu
-  - Jenis Keperluan
-  - Data Petugas
-  - Departemen
-  - Jabatan
+## ✨ Deskripsi Singkat
+Halaman ini merupakan pusat kendali (admin panel) dari sistem **Buku Tamu Digital**. Admin dapat memantau statistik kunjungan, mengelola data pengguna, serta melakukan konfigurasi data pendukung seperti departemen, jabatan, dan jenis keperluan.
+
+---
+
+## 🖥️ Dashboard Utama
+Di bagian utama dashboard, admin dapat melihat **statistik real-time**:
+
+| Informasi             | Keterangan                                                                 |
+|-----------------------|-----------------------------------------------------------------------------|
+| **Total Tamu**        | Jumlah total semua tamu yang pernah mengisi data kunjungan.                 |
+| **Tamu Hari Ini**     | Jumlah tamu yang melakukan kunjungan hari ini.                              |
+| **Rata-rata/Bulan**   | Jumlah kunjungan tamu rata-rata setiap bulan.                               |
+| **Jumlah Petugas**    | Total petugas yang aktif dan tercatat di sistem.                            |
+
+### 📊 Visualisasi Data:
+- **Grafik Kunjungan per Departemen**  
+  Menampilkan sebaran tamu berdasarkan departemen tujuan.
+- **Topik Keperluan yang Sering Dibahas**  
+  Menunjukkan topik/jenis keperluan yang paling banyak diminati tamu.
+
+---
+
+
     
 ### 👤 TAMU (Frontend)
 Tamu dapat melakukan input ke sistem tanpa login:
