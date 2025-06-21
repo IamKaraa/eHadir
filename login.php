@@ -3,7 +3,6 @@ session_start();
 include 'config/koneksi.php';
 
 if (isset($_SESSION['admin'])) {
-    // Kalau udah login, langsung diarahkan ke dashboard
     header('Location: dashboard.php');
     exit;
 }
@@ -14,7 +13,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'] ?? '';
     $password = $_POST['password'] ?? '';
 
-    // Cari user di database
     $query = "SELECT * FROM admin WHERE username = ?";
     $stmt = mysqli_prepare($conn, $query);
     mysqli_stmt_bind_param($stmt, 's', $username);
@@ -23,7 +21,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user = mysqli_fetch_assoc($result);
 
     if ($user && password_verify($password, $user['password'])) {
-        // Login sukses, buat session
         $_SESSION['admin'] = $user['username'];
         header('Location: dashboard.php');
         exit;
@@ -48,10 +45,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             height: auto;
         }
         .rounded-input {
-            border-radius: 15px; /* Radius lebih besar seperti gambar */
+            border-radius: 15px; 
         }
         .input-border-gray {
-            border: 1px solid #D3D3D3; /* Hanya stroke line abu-abu terang */
+            border: 1px solid #D3D3D3; 
         }
         .half-screen {
             width: 50%;
@@ -67,8 +64,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="text-white text-center">
             <img src="https://upload.wikimedia.org/wikipedia/id/thumb/f/ff/Logo_UnivLampung.png/960px-Logo_UnivLampung.png" alt="Logo" class="logo mx-auto mb-4">
             <h2 class="text-xl font-bold">eHadir</h2>
-            <h3 class="text-lg">Sistem Informasi Buku Tamu Digital</h3>
-            <p class="text-sm">Ilmu Komputer, Universitas Lampung</p>
+            <h3 class="text-lg">Digital Guestbook Information System</h3>
+            <p class="text-sm">Computer Science, Lampung University</p>
         </div>
     </div>
     <div class="half-screen flex items-center justify-center bg-white">
