@@ -15,7 +15,7 @@ Halaman ini merupakan pusat kendali (admin panel) dari sistem **Buku Tamu Digita
 
 ---
 
-## 🖥️ Dashboard Utama
+## 🖥️ Dashboard Admin
 Di bagian utama dashboard, admin dapat melihat **statistik real-time**:
 
 | Informasi             | Keterangan                                                                 |
@@ -54,6 +54,28 @@ Di bagian utama dashboard, admin dapat melihat **statistik real-time**:
 - **Sidebar Toggle**: Sidebar bisa dibuka/tutup lewat tombol hamburger.
 - **Auto-Close Sidebar**: Sidebar otomatis tertutup jika pointer keluar dari area.
 - **Tampilan Responsif**: Desain cocok untuk layar desktop dan mobile.
+  
+# Tamu  
+<img width="1436" alt="image" src="https://github.com/user-attachments/assets/30aba7dd-f50f-4036-9ad4-f9596a979df1" />
+
+# Kelola Tamu
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/506f3af4-05ec-4631-8322-8605292d5b04" />
+
+# Jenis Keperluan
+<img width="1431" alt="image" src="https://github.com/user-attachments/assets/1727e94a-7c28-4ca3-a00c-1d8821c42cc2" />
+
+# Data Petugas
+<img width="1438" alt="image" src="https://github.com/user-attachments/assets/ddd575da-11a9-4e29-bba0-9e72b10771d5" />
+
+# Departemen
+<img width="1439" alt="image" src="https://github.com/user-attachments/assets/9a0c5d50-f087-4b78-9dfc-62bbc371f385" />
+
+# Jabatan
+<img width="1428" alt="image" src="https://github.com/user-attachments/assets/574bb673-a6f4-4cdb-8892-481cf3c287d9" />
+
+# Login
+<img width="1440" alt="image" src="https://github.com/user-attachments/assets/0c2aad47-8920-40d6-ba1d-5403feef4def" />
+
 
     
 ### 👤 TAMU (Frontend)
