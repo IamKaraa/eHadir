@@ -106,11 +106,19 @@ Role ini dirancang khusus untuk staf resepsionis yang bertugas mencatat kedatang
 - Melihat daftar tamu
 - Download excel dan pdf
 
+# dashboard resepsionis
+<img width="1428" alt="image" src="https://github.com/user-attachments/assets/0f4d14ab-b6ef-4146-8b69-a8b1f586d172" />
+
+# input tamu
+<img width="1430" alt="image" src="https://github.com/user-attachments/assets/20f45548-9719-4de7-ac81-f8c099d9ec78" />
+
+# daftar tamu
+![Uploading image.png…]()
+
 
 ---
 
 ## 📁 Struktur Folder
-
 
 
 ## 🛠️ Teknologi yang Digunakan
